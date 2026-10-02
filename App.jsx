@@ -4,16 +4,9 @@ import {
   Map,
   Lightbulb
 } from "lucide-react"
-const handleAnalyze = () => {
-  alert("AI analysis started")
-}
-<button className="analyze-btn" onClick={handleAnalyze}>
-  Analyze with AI
-</button>
+
 function App() {
-
   return (
-
     <div className="app">
 
       <aside className="sidebar">
@@ -22,46 +15,47 @@ function App() {
 
         <nav>
 
-  <div className="nav-item active">
-    <LayoutDashboard size={18} />
-    <span>Dashboard</span>
-  </div>
+          <div className="nav-item active">
+            <LayoutDashboard size={18} />
+            <span>Dashboard</span>
+          </div>
 
-  <div className="nav-item">
-    <FilePlus size={18} />
-    <span>Report Problem</span>
-  </div>
+          <div className="nav-item">
+            <FilePlus size={18} />
+            <span>Report Problem</span>
+          </div>
 
-  <div className="nav-item">
-    <Map size={18} />
-    <span>Community Map</span>
-  </div>
+          <div className="nav-item">
+            <Map size={18} />
+            <span>Community Map</span>
+          </div>
 
-  <div className="nav-item">
-    <Lightbulb size={18} />
-    <span>Insights</span>
-  </div>
+          <div className="nav-item">
+            <Lightbulb size={18} />
+            <span>Insights</span>
+          </div>
 
-   </nav>
+        </nav>
 
       </aside>
 
 
       <main className="main-content">
+
         <div className="top-header">
 
-  <div>
-    <h2>Community Pulse AI</h2>
-    <p>Governance Intelligence Dashboard</p>
-  </div>
+          <div>
+            <h2>Community Pulse AI</h2>
+            <p>Governance Intelligence Dashboard</p>
+          </div>
 
-  <div className="ai-status">
-    <span></span>
-    AI Active
-  </div>
+          <div className="ai-status">
+            <span></span>
+            AI Active
+          </div>
 
-   
-   </div>
+        </div>
+
 
         <h1>Community Dashboard</h1>
 
@@ -233,27 +227,57 @@ function App() {
               <div className="map-grid"></div>
 
 
-             <div className="map-point point-one" onClick={() => alert("Water Supply Disruption\n17 related reports\nPriority: HIGH")}>
+              <div
+                className="map-point point-one"
+                onClick={() =>
+                  alert(
+                    "Water Supply Disruption\n17 related reports\nPriority: HIGH"
+                  )
+                }
+              >
                 <span>17</span>
+              </div>
 
-                   </div>
 
-                   <div className="map-point point-two" onClick={() => alert("Water Supply Disruption\n9 related reports\nPriority: MEDIUM")}>
+              <div
+                className="map-point point-two"
+                onClick={() =>
+                  alert(
+                    "Waste Collection Delay\n9 related reports\nPriority: MEDIUM"
+                  )
+                }
+              >
                 <span>9</span>
-                </div>
+              </div>
 
 
-             <div className="map-point point-three" onClick={() => alert("Water Supply Disruption\n7 related reports\nPriority: MEDIUM")}>
-                  <span>7</span>
-                     </div>
+              <div
+                className="map-point point-three"
+                onClick={() =>
+                  alert(
+                    "Road Damage Cluster\n7 related reports\nPriority: MEDIUM"
+                  )
+                }
+              >
+                <span>7</span>
+              </div>
 
-                     <div className="map-point point-four" onClick={() => alert("Water Supply Disruption\n4 related reports\nPriority: LOW")}>
-                        <span>4</span>
-                          </div>
-                          </div>
 
-                 
-                  <div className="map-legend">
+              <div
+                className="map-point point-four"
+                onClick={() =>
+                  alert(
+                    "Street Light Issue\n4 related reports\nPriority: LOW"
+                  )
+                }
+              >
+                <span>4</span>
+              </div>
+
+            </div>
+
+
+            <div className="map-legend">
 
               <div>
                 <span className="legend-dot critical"></span>
@@ -275,262 +299,397 @@ function App() {
           </div>
 
         </div>
+
+
         <div className="ai-priority-section">
 
-  <div className="section-header">
-    <h2>AI Priority Insight</h2>
-    <p>Why this issue needs attention</p>
-  </div>
+          <div className="section-header">
+            <h2>AI Priority Insight</h2>
+            <p>Why this issue needs attention</p>
+          </div>
 
-  <div className="priority-card">
 
-    <div>
-      <span className="priority-label">HIGH PRIORITY</span>
+          <div className="priority-card">
 
-      <h3>Water Supply Disruption</h3>
+            <div>
 
-      <p>
-        AI detected a rapid increase in related reports
-        across multiple community locations.
-      </p>
-    </div>
+              <span className="priority-label">
+                HIGH PRIORITY
+              </span>
 
-    <div className="priority-score">
-      <strong>87</strong>
-      <span>Priority Score</span>
-    </div>
+              <h3>Water Supply Disruption</h3>
 
-  </div>
+              <p>
+                AI detected a rapid increase in related reports
+                across multiple community locations.
+              </p>
 
-  </div>
-  <div className="report-section">
+            </div>
 
-  <div className="section-header">
-    <h2>Report a Community Problem</h2>
-    <p>Submit an issue for AI-powered analysis</p>
-  </div>
 
-  <div className="report-card">
+            <div className="priority-score">
 
-    <div className="form-group">
-      <label>Problem Title</label>
-      <input
-        type="text"
-        placeholder="Example: Water supply is not available"
-      />
-    </div>
+              <strong>87</strong>
 
-    <div className="form-group">
-      <label>Problem Description</label>
-      <textarea
-        placeholder="Describe the problem..."
-        rows="4"
-      ></textarea>
-    </div>
+              <span>Priority Score</span>
 
-    <div className="form-row">
+            </div>
 
-      <div className="form-group">
-        <label>Location</label>
-        <input
-          type="text"
-          placeholder="Enter area or locality"
-        />
-      </div>
+          </div>
 
-      <div className="form-group">
-        <label>Category</label>
+        </div>
 
-        <select>
-          <option>Select category</option>
-          <option>Water Supply</option>
-          <option>Waste Management</option>
-          <option>Road Damage</option>
-          <option>Electricity</option>
-          <option>Other</option>
-        </select>
 
-      </div>
+        <div className="report-section">
 
-    </div>
+          <div className="section-header">
+            <h2>Report a Community Problem</h2>
+            <p>Submit an issue for AI-powered analysis</p>
+          </div>
 
-    <button className="analyze-btn">
-      Analyze with AI
-    </button>
 
-     </div>
+          <div className="report-card">
 
-    </div>
-       <div className="analysis-section">
+            <div className="form-group">
 
-  <div className="section-header">
-    <h2>AI Analysis Result</h2>
-    <p>Structured insight generated from community reports</p>
-  </div>
+              <label>Problem Title</label>
 
-  <div className="analysis-card">
+              <input
+                type="text"
+                placeholder="Example: Water supply is not available"
+              />
 
-    <div className="analysis-item">
-      <span>Detected Issue</span>
-      <strong>Water Supply Disruption</strong>
-    </div>
+            </div>
 
-    <div className="analysis-item">
-      <span>Related Reports</span>
-      <strong>17 reports</strong>
-    </div>
 
-    <div className="analysis-item">
-      <span>Issue Status</span>
-      <strong className="status-high">High Priority</strong>
-    </div>
+            <div className="form-group">
 
-    <div className="analysis-item">
-      <span>AI Recommendation</span>
-      <p>
-        Multiple related reports indicate an emerging water
-        supply issue that may require local attention.
-      </p>
-    </div>
+              <label>Problem Description</label>
 
-  </div>
+              <textarea
+                placeholder="Describe the problem..."
+                rows="4"
+              ></textarea>
 
-    
-    </div>
-    <div className="reports-section">
+            </div>
 
-  <div className="section-header">
-    <h2>Recent Community Reports</h2>
-    <p>Latest issues submitted by citizens</p>
-  </div>
 
-  <div className="reports-card">
+            <div className="form-row">
 
-    <div className="report-item">
-      <div>
-        <h3>Water supply stopped</h3>
-        <p>Rajendra Nagar • 10 minutes ago</p>
-      </div>
+              <div className="form-group">
 
-      <span className="report-category">Water</span>
-    </div>
+                <label>Location</label>
 
-    <div className="report-item">
-      <div>
-        <h3>Garbage collection delayed</h3>
-        <p>Arera Colony • 25 minutes ago</p>
-      </div>
+                <input
+                  type="text"
+                  placeholder="Enter area or locality"
+                />
 
-      <span className="report-category">Waste</span>
-    </div>
+              </div>
 
-    <div className="report-item">
-      <div>
-        <h3>Large pothole on main road</h3>
-        <p>Kolar Road • 42 minutes ago</p>
-      </div>
 
-      <span className="report-category">Road</span>
-    </div>
+              <div className="form-group">
 
-    <div className="report-item">
-      <div>
-        <h3>Street light not working</h3>
-        <p>MP Nagar • 1 hour ago</p>
-      </div>
+                <label>Category</label>
 
-      <span className="report-category">Electricity</span>
-    </div>
+                <select>
 
-  </div>
-  
-     </div>
-     <div className="pipeline-section">
+                  <option>Select category</option>
+                  <option>Water Supply</option>
+                  <option>Waste Management</option>
+                  <option>Road Damage</option>
+                  <option>Electricity</option>
+                  <option>Other</option>
 
-  <div className="section-header">
-    <h2>AI Processing Pipeline</h2>
-    <p>How Community Pulse converts reports into actionable insights</p>
-  </div>
+                </select>
 
-  <div className="pipeline-card">
+              </div>
 
-    <div className="pipeline-step">
-      <div className="pipeline-number">1</div>
-      <h3>Community Report</h3>
-      <p>Citizen submits an issue</p>
-    </div>
+            </div>
 
-    <div className="pipeline-arrow">→</div>
 
-    <div className="pipeline-step">
-      <div className="pipeline-number">2</div>
-      <h3>AI Classification</h3>
-      <p>AI identifies the issue type</p>
-    </div>
+            <button className="analyze-btn">
+              Analyze with AI
+            </button>
 
-    <div className="pipeline-arrow">→</div>
+          </div>
 
-    <div className="pipeline-step">
-      <div className="pipeline-number">3</div>
-      <h3>Issue Clustering</h3>
-      <p>Related reports are grouped</p>
-    </div>
+        </div>
 
-    <div className="pipeline-arrow">→</div>
 
-    <div className="pipeline-step">
-      <div className="pipeline-number">4</div>
-      <h3>Priority Insight</h3>
-      <p>AI highlights important issues</p>
-    </div>
+        <div className="analysis-section">
 
-  </div>
+          <div className="section-header">
 
-  </div>   
-    <div className="system-status-section">
+            <h2>AI Analysis Result</h2>
 
-  <div className="section-header">
-    <h2>AI System Status</h2>
-    <p>Current status of Community Pulse intelligence services</p>
-  </div>
+            <p>
+              Structured insight generated from community reports
+            </p>
 
-  <div className="status-grid">
+          </div>
 
-    <div className="status-card">
-      <div className="status-dot online"></div>
-      <div>
-        <h3>AI Classification</h3>
-        <p>Operational</p>
-      </div>
-    </div>
 
-    <div className="status-card">
-      <div className="status-dot online"></div>
-      <div>
-        <h3>Issue Clustering</h3>
-        <p>Operational</p>
-      </div>
-    </div>
+          <div className="analysis-card">
 
-    <div className="status-card">
-      <div className="status-dot online"></div>
-      <div>
-        <h3>Trend Detection</h3>
-        <p>Monitoring</p>
-      </div>
-    </div>
+            <div className="analysis-item">
 
-  </div>
+              <span>Detected Issue</span>
 
-    </div>
+              <strong>
+                Water Supply Disruption
+              </strong>
+
+            </div>
+
+
+            <div className="analysis-item">
+
+              <span>Related Reports</span>
+
+              <strong>17 reports</strong>
+
+            </div>
+
+
+            <div className="analysis-item">
+
+              <span>Issue Status</span>
+
+              <strong className="status-high">
+                High Priority
+              </strong>
+
+            </div>
+
+
+            <div className="analysis-item">
+
+              <span>AI Recommendation</span>
+
+              <p>
+                Multiple related reports indicate an emerging water
+                supply issue that may require local attention.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div className="reports-section">
+
+          <div className="section-header">
+
+            <h2>Recent Community Reports</h2>
+
+            <p>
+              Latest issues submitted by citizens
+            </p>
+
+          </div>
+
+
+          <div className="reports-card">
+
+            <div className="report-item">
+
+              <div>
+                <h3>Water supply stopped</h3>
+                <p>Rajendra Nagar • 10 minutes ago</p>
+              </div>
+
+              <span className="report-category">
+                Water
+              </span>
+
+            </div>
+
+
+            <div className="report-item">
+
+              <div>
+                <h3>Garbage collection delayed</h3>
+                <p>Arera Colony • 25 minutes ago</p>
+              </div>
+
+              <span className="report-category">
+                Waste
+              </span>
+
+            </div>
+
+
+            <div className="report-item">
+
+              <div>
+                <h3>Large pothole on main road</h3>
+                <p>Kolar Road • 42 minutes ago</p>
+              </div>
+
+              <span className="report-category">
+                Road
+              </span>
+
+            </div>
+
+
+            <div className="report-item">
+
+              <div>
+                <h3>Street light not working</h3>
+                <p>MP Nagar • 1 hour ago</p>
+              </div>
+
+              <span className="report-category">
+                Electricity
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div className="pipeline-section">
+
+          <div className="section-header">
+
+            <h2>AI Processing Pipeline</h2>
+
+            <p>
+              How Community Pulse converts reports into actionable insights
+            </p>
+
+          </div>
+
+
+          <div className="pipeline-card">
+
+            <div className="pipeline-step">
+
+              <div className="pipeline-number">1</div>
+
+              <h3>Community Report</h3>
+
+              <p>Citizen submits an issue</p>
+
+            </div>
+
+
+            <div className="pipeline-arrow">
+              →
+            </div>
+
+
+            <div className="pipeline-step">
+
+              <div className="pipeline-number">2</div>
+
+              <h3>AI Classification</h3>
+
+              <p>AI identifies the issue type</p>
+
+            </div>
+
+
+            <div className="pipeline-arrow">
+              →
+            </div>
+
+
+            <div className="pipeline-step">
+
+              <div className="pipeline-number">3</div>
+
+              <h3>Issue Clustering</h3>
+
+              <p>Related reports are grouped</p>
+
+            </div>
+
+
+            <div className="pipeline-arrow">
+              →
+            </div>
+
+
+            <div className="pipeline-step">
+
+              <div className="pipeline-number">4</div>
+
+              <h3>Priority Insight</h3>
+
+              <p>AI highlights important issues</p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div className="system-status-section">
+
+          <div className="section-header">
+
+            <h2>AI System Status</h2>
+
+            <p>
+              Current status of Community Pulse intelligence services
+            </p>
+
+          </div>
+
+
+          <div className="status-grid">
+
+            <div className="status-card">
+
+              <div className="status-dot online"></div>
+
+              <div>
+                <h3>AI Classification</h3>
+                <p>Operational</p>
+              </div>
+
+            </div>
+
+
+            <div className="status-card">
+
+              <div className="status-dot online"></div>
+
+              <div>
+                <h3>Issue Clustering</h3>
+                <p>Operational</p>
+              </div>
+
+            </div>
+
+
+            <div className="status-card">
+
+              <div className="status-dot online"></div>
+
+              <div>
+                <h3>Trend Detection</h3>
+                <p>Monitoring</p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
 
       </main>
 
     </div>
-
   )
-
 }
 
-
-export default App;
+export default App
